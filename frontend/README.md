@@ -18,15 +18,15 @@ src
 |	|	├── index.js
 |       | 	└── styles.js
 |       |
-|      ├── Input
+|       ├── Input
 |       |	├── index.js
-|       |        └── styles.js
+|       |       └── styles.js
 |       |
-|      ├── InputMask
+|       ├── InputMask
 |	|	├── index.js
 |       | 	└── styles.js
 |       |
-|      └── Select
+|       └── Select
 |		├── index.js
 |    	        └── styles.js
 |   
@@ -69,7 +69,7 @@ src
 |   |   └── rootSaga.js
 |   ├── createStore.js
 |   ├── index.js
-|   ├── persistReducers.js
+|   └── persistReducers.js
 |
 ├── styles
 |	└── global.js
@@ -110,12 +110,48 @@ src
 
 `services/history` - arquivo de configuração do `history`, da lib [History](https://github.com/ReactTraining/history), utilizado para redirecionar o usuário entre páginas.
 
+`store` - contém os arquivos de configuração do Redux e conexão com o Reactotron. Cada subpasta da pasta `store/modules` representa um reducer. O arquivo **persistReducers.js** usa a lib [Redux Persist](https://github.com/rt2zz/redux-persist) para salvar os dados no LocalStorage do navegador. Os arquivos **rootReducer** e **rootSaga** guardam os reducers e sagas da aplicação, para serem utilizados no `store/index.js`.
+
+`store/modules/auth` - Representa o **reducer** que guarda os dados de autenticação, os dados de login do Administrador. O arquivo **actions.js** contém as actions do Redux, usada para compartilhar dados entre os componentes. O arquivo **reducer.js**  representa o reducer em si, os dados salvos em um estado global e compartilhado com os componentes da aplicação, e efetua um 'listening' nas actions, para fazer alterações no estado. O arquivo **sagas.js** é responsável pelas chamadas à API e qualquer requisição assíncrona, como o login em si.
+
+`styles` - pasta que guarda o estilo global, no arquivo **global.js** usando a lib [Styled Components](https://github.com/styled-components/vscode-styled-components). Uso para resetar valores de estilização aplicados pelo navegador, definir a fonte usada em toda a aplicação (Roboto), cor de fundo e demais configurações de CSS.
+
+`App,js` - componente principal da aplicação. Reúne o componente de rotas, estilo global e todos os componentes necessários para a aplicação rodar. É o componente renderizado pelo **React**.
+
+`routes,js` - componente que efetua o roteamento das páginas usando a lib [React Router](https://github.com/ReactTraining/react-router). Define o roteamento e a SPA em si.
+
+`index.js` - arquivo que renderiza o componente principal `App`, rodando a aplicação no browser.
+
+`.eslintrc.js & .prettierrc` - configuração do [ESLint](https://github.com/eslint/eslint) e [Prettier](https://github.com/prettier/prettier) para identar e formatar o código, usado durante o desenvolvimento da aplicação.
+
+
 ---
-Plataforma Gupy
+### Libs e Frameworks utilizados:
+
+Outras libs utilizadas no desenvolvimento da aplicação, além das libs já listadas acima.
+
+- [React](https://github.com/facebook/react)
+- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [Redux](https://github.com/reduxjs/redux) - lib para gerenciamento de estado global entre os componentes. Também conta com Redux Saga para lidar com assincronismo e chamadas à API, e Redux Persist.para persistir os dados do usuário no LocalStorage (para mantê-lo logado na aplicação, etc).
+- [Reactotron](https://github.com/infinitered/reactotron) - usado em desenvolvimento para debugar a aplicação, monitorar e gerenciar o estado do Redux, e lidar com os dados recebidos da API.
+- [Immer](https://github.com/immerjs/immer) - manipula o estado do Redux, sem quebrar a imutabilidade.
+- [History](https://github.com/ReactTraining/history) - usado para redirecionamento de rotas.
+- [Styled Components](https://github.com/styled-components/styled-components) - cria componentes estilizados permitindo encadear os estilos (estilizar componentes e estruturas internas do componente), e estilizar baseado em propriedades.
+- [Axios](https://github.com/axios/axios) - usado para fazer as requisições a API e consumir os dados do back-end, para exibí-los na aplicação.
+- [Unform](https://github.com/rocketseat/unform) - biblioteca de formulários contendo Inputs estilizados, máscaras de Input, e diversos componentes para formulários. Usado nas páginas de Login e no formulário principal.
+- [React Radio Buttons](https://www.npmjs.com/package/react-radio-buttons) - além das libs para Input e Select, há essa lib que fornece um componente especial de Radio Button, permitindo aplicar validações quando aliado à lib Unform.
+- [Polished](https://github.com/styled-components/polished) - manipulação de cores nos botões e inputs da aplicação. Usado em conjunto com o Styled Components.
+- [React Toastify](https://github.com/fkhadra/react-toastify) - **alerts** estilizados nas telas de Login e formulário. Exibidos quando o usuário preenche algum dado incorretamente e após sucesso no envio do formulário.
+- [Date-fns](https://github.com/date-fns/date-fns) - utilizado para formatar as datas no front-end.
+- [Prop Types](https://github.com/facebook/prop-types) - validação dos dados passados como propriedades nos componentes.
+- [Yup](https://github.com/jquense/yup) - usado para validar os dados enviados no formulário.
+
 ---
+###Plataforma Gupy
+
 Italo Marcos
 
 ---
-LinkedIn
----
+###LinkedIn
+
 [Italo Marcos](https://www.linkedin.com/in/italomarcos1)
