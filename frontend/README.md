@@ -15,20 +15,20 @@ Estrutura de Pastas
 src
 ├── components
 |	├── Header
-|	|	├── index.js
-|       | 	└── styles.js
+|	|   ├── index.js
+|       |   └── styles.js
 |       |
 |       ├── Input
-|       |	├── index.js
-|       |       └── styles.js
+|       |   ├── index.js
+|       |   └── styles.js
 |       |
 |       ├── InputMask
-|	|	├── index.js
-|       | 	└── styles.js
+|	|    ├── index.js
+|       |    └── styles.js
 |       |
 |       └── Select
-|		├── index.js
-|    	        └── styles.js
+|	     ├── index.js
+|    	     └── styles.js
 |   
 ├── config
 |   └── ReactotronConfig.js
@@ -51,20 +51,20 @@ src
 |   |	├── index.js
 |   | 	└── styles.js
 |   |
-|   ├── UpdateForm
+|  └── UpdateForm
 |   	├── index.js
 |    	└── styles.js
 |
 ├── services
-|   ├── api.js
-|   └── history.js
+|    ├── api.js
+|    └── history.js
 |
 ├── store
 |   ├── modules
 |   |   ├── auth
-|   |   |  ├── actions.js
-|   |   |  ├── reducer.js
-|   |   |  └── sagas.js
+|   |   |    ├── actions.js
+|   |   |    ├── reducer.js
+|   |   |    └── sagas.js
 |   |   ├── rootReducer.js
 |   |   └── rootSaga.js
 |   ├── createStore.js
