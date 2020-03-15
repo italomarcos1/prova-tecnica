@@ -16,19 +16,19 @@ src
 ├── components
 |	├── Header
 |	|	├── index.js
-|   | 	└── styles.js
-|   |
-|	├── Input
+|       | 	└── styles.js
+|       |
+|      ├── Input
+|       |	├── index.js
+|       |        └── styles.js
+|       |
+|      ├── InputMask
 |	|	├── index.js
-|   | 	└── styles.js
-|   |
-|	├── InputMask
-|	|	├── index.js
-|   | 	└── styles.js
-|   |
-|	└── Select
+|       | 	└── styles.js
+|       |
+|      └── Select
 |		├── index.js
-|    	└── styles.js
+|    	        └── styles.js
 |   
 ├── config
 |   └── ReactotronConfig.js
