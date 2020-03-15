@@ -3,6 +3,9 @@
 ---
 #Especificação do Front-end
 
+
+Construí uma SPA (Single-Page Application) em React, consumindo a API do Back-end. Contém a página principal do formulário, uma página de redirecionamento (exibida após o usuário preencher o formulário), com a opção de atualizar os dados já preenchidos.
+
 ###Estrutura de Pastas
 
 ```
