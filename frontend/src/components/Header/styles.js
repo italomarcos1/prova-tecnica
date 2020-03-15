@@ -4,7 +4,6 @@ import { darken } from 'polished';
 export const Container = styled.div`
   background: #fff;
   padding: 0 30px;
-  position: fixed;
 `;
 
 export const Content = styled.div`

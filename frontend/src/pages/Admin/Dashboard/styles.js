@@ -14,7 +14,7 @@ export const Container = styled.div`
   header {
     color: #d9d9d9;
     font-size: 48px;
-    margin-top: 40px;
+    margin-top: 80px;
   }
 `;
 
@@ -51,8 +51,8 @@ export const Content = styled.div`
 
   ul {
     display: flex;
-    height: 600px;
     flex: 1;
+    padding: 15px 10px;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -74,6 +74,7 @@ export const Item = styled.li`
   width: 800px;
   font-size: 20px;
   margin-right: 30px;
+  margin-bottom: 20px;
   transition: background-color 0.1s;
 
   &:hover {

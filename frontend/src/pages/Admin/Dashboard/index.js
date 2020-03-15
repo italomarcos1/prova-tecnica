@@ -26,7 +26,6 @@ export default function Dashboard() {
   useEffect(() => {
     async function loadData() {
       const response = await api.get('data');
-      console.tron.log(response.data);
       const formattingDate = response.data.map(value => ({
         ...value,
         createdAt: format(parseISO(value.createdAt), "d 'de' MMMM 'de' yyyy", {
@@ -36,7 +35,6 @@ export default function Dashboard() {
           locale: pt,
         }),
       }));
-      console.tron.log(formattingDate);
       setData(formattingDate);
     }
 
@@ -110,7 +108,9 @@ export default function Dashboard() {
                   </span>
                 )}
                 <span>{user.createdAt}</span>
-                <span>{user.updatedAt !== user.createdAt ? 'Yes' : '-'}</span>
+                <span>
+                  {user.updatedAt !== user.createdAt ? user.updatedAt : '-'}
+                </span>
               </Item>
             ))}
           </ul>
