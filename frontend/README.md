@@ -1,23 +1,34 @@
 ![EloGroup](../EloGroup.png)
 
 ---
-#Especificação do Front-end
+Especificação do Front-end
 ---
 
-Construí uma SPA (Single-Page Application) em React, consumindo a API do Back-end. Contém a página principal do formulário, uma página de redirecionamento (exibida após o usuário preencher o formulário), com a opção de atualizar os dados já preenchidos.
+Construí uma **SPA** (Single-Page Application) em **React**, consumindo a API do Back-end. Contém a página principal do formulário, uma página de redirecionamento (exibida após o usuário preencher o formulário), com a opção de atualizar os dados já preenchidos.
 
-Tomei a liberdade de criar uma página de Administrador, com email e senha de acesso para efetuar Login e ter acesso ao Dashboard, onde todas as respostas do formulário são listadas. 
+Tomei a liberdade de criar uma página de **Administrador**, com email e senha de acesso para efetuar **Login** e ter acesso ao **Dashboard**, onde todas as respostas do formulário são listadas. 
 
-
-###Estrutura de Pastas
-
+---
+Estrutura de Pastas
+---
 ```
 src
 ├── components
 |	├── Header
+|	|	├── index.js
+|   | 	└── styles.js
+|   |
 |	├── Input
+|	|	├── index.js
+|   | 	└── styles.js
+|   |
 |	├── InputMask
+|	|	├── index.js
+|   | 	└── styles.js
+|   |
 |	└── Select
+|		├── index.js
+|    	└── styles.js
 |   
 ├── config
 |   └── ReactotronConfig.js
@@ -71,36 +82,27 @@ src
 
 		
 ```
+`src` - pasta principal do repositório.
 
-Construí uma SPA (Single-Page Application) em React, consumindo a API do Back-end. Contém a página principal do formulário, uma página de redirecionamento (exibida após o usuário preencher o formulário), com a opção de atualizar os dados já preenchidos.
+`components` - contém os componentes que foram reutilizados em várias partes da aplicação, assim reduz o código duplicado, compartilha o mesmo estilo entre as páginas e torna o desenvolvimento mais produtivo. Cada componente contém o arquivo **index.js** que define o componente em si, e um **styles.js** que contém a estilização e os sub-componentes internos da página.
 
+`Header` - o cabeçalho da aplicação, aparece na página principal do Administrador. 
 
+`Input` - componente de input da lib [Unform](https://github.com/rocketseat/unform). Permite estilização e validações.
 
+`InputMask` - componente de input especial que permite aplicar máscara no input, usado pra preencher o campo de telefone e não permitir caracteres que não sejam númericos. Usa uma **regex** para validar o telefone informado. Provém da **lib** [React Input Mask](https://github.com/sanniassin/react-input-mask).
 
+`Select` - componente que substitui o ComboBox padrão do JavaScript. Permite aplicar validação nos valores, é altamante estilizável e permite listar valores puxados da API. Provém da **lib** [React Select](https://react-select.com/async).
 
-O que você deve construir:
+`config` - contém o arquivo de configuração do [Reactotron](https://github.com/infinitered/reactotron), um debugger para React e React Native que utilizo durante o desenvolvimento da aplicação para monitorar os reducers, chamadas à API e fazer log dos erros.
 
----
-1. O Formulário deverá conter os seguintes campos:
-	* Nome: Tipo Texto
-	* Telefone: Tipo Texto
-	* Como nos conheceu: Tipo Combo box (select) com as seguintes opções: Tv, Internet e outros.
-	* Possui rede social: Tipo rádio com as opções Sim e Não. Ao clicar em Sim, habilitar o campo abaixo.
-	* Quais: Tipo checkbox com as seguintes opções Facebook, LinkedIn e Instagram.
----
-
-2. Validações
-	* Nome deve ser obrigatório e conter ao menos um sobrenome.
-	* Telefone deve possuir somente números no seguinte formato: 99 – 99999999.
-	* Os valores informados nos checkbox somente podem ser enviados se o campo Possui rede social estiver marcado como Sim.
-	* As opções selecionadas nos campos do tipo checkbox devem ser enviadas em um Array.
----
-
-3. Considerações
-	* As mensagens de validação podem ser emitidas por qualquer meio (alert, toast, dentre outros).
-	* Após o envio (considerar que se as validações de campos estiverem ok o envio ocorrerá com sucesso) o botão de enviar deve ser desabilitado.
----
-
-4. Os códigos desenvolvidos deverão ser "commitados" em um repositório do git hub, contendo um arquivo README.md explicando a hierarquia dos arquivos e informando o nome utilizado na plataforma Gupy, compartilhado em modo somente leitura, apenas após a finalização do desafio, com o seguinte usuário: elogroup-t 
 
 ---
+Plataforma Gupy
+---
+Italo Marcos
+
+---
+LinkedIn
+---
+[Italo Marcos](https://www.linkedin.com/in/italomarcos1)
