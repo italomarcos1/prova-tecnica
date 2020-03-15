@@ -1,68 +1,94 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![EloGroup](../EloGroup.png)
 
-## Available Scripts
+---
+#Especificação do Front-end
 
-In the project directory, you can run:
+###Estrutura de Pastas
 
-### `yarn start`
+```
+src
+|	
+	pages
+		Admin
+			Dashboard
+			Login
+		AfterForm
+		Form
+		UpdateForm
+	services
+		api.js
+		history.js
+	store
+		[configuração do Redux]
+	styles
+		global.js
+	App.js
+	index.js
+	routes.js
+src
+├── components
+|	├── Header
+|	├── Input
+|	├── InputMask
+|	└── Select
+|   
+├── config
+|   └── ReactotronConfig.js
+|
+├── pages
+|   ├── Admin
+|   |	├── Dashboard
+|   |	|	├──index.js
+|   | 	|	└──styles.js
+|   | 	|
+|   |	└── Login
+|   |		├──index.js
+|   | 		└──styles.js
+|   |
+   ├── AfterForm
+├── _layouts
+|   ├── default.html
+|   └── post.html
+├── _posts
+|   ├── 2007-10-29-why-every-programmer-should-play-nethack.textile
+|   └── 2009-04-26-barcamp-boston-4-roundup.textile
+├── _data
+|   └── members.yml
+├── _site
+└── index.html
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+		
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Construí uma SPA (Single-Page Application) em React, consumindo a API do Back-end. Contém a página principal do formulário, uma página de redirecionamento (exibida após o usuário preencher o formulário), com a opção de atualizar os dados já preenchidos.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+O que você deve construir:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
+1. O Formulário deverá conter os seguintes campos:
+	* Nome: Tipo Texto
+	* Telefone: Tipo Texto
+	* Como nos conheceu: Tipo Combo box (select) com as seguintes opções: Tv, Internet e outros.
+	* Possui rede social: Tipo rádio com as opções Sim e Não. Ao clicar em Sim, habilitar o campo abaixo.
+	* Quais: Tipo checkbox com as seguintes opções Facebook, LinkedIn e Instagram.
+---
 
-### `yarn eject`
+2. Validações
+	* Nome deve ser obrigatório e conter ao menos um sobrenome.
+	* Telefone deve possuir somente números no seguinte formato: 99 – 99999999.
+	* Os valores informados nos checkbox somente podem ser enviados se o campo Possui rede social estiver marcado como Sim.
+	* As opções selecionadas nos campos do tipo checkbox devem ser enviadas em um Array.
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Considerações
+	* As mensagens de validação podem ser emitidas por qualquer meio (alert, toast, dentre outros).
+	* Após o envio (considerar que se as validações de campos estiverem ok o envio ocorrerá com sucesso) o botão de enviar deve ser desabilitado.
+---
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Os códigos desenvolvidos deverão ser "commitados" em um repositório do git hub, contendo um arquivo README.md explicando a hierarquia dos arquivos e informando o nome utilizado na plataforma Gupy, compartilhado em modo somente leitura, apenas após a finalização do desafio, com o seguinte usuário: elogroup-t 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+---
