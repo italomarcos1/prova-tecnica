@@ -2,11 +2,12 @@
 
 ---
 #Especificação do Front-end
-
+---
 
 Construí uma SPA (Single-Page Application) em React, consumindo a API do Back-end. Contém a página principal do formulário, uma página de redirecionamento (exibida após o usuário preencher o formulário), com a opção de atualizar os dados já preenchidos.
 
 Tomei a liberdade de criar uma página de Administrador, com email e senha de acesso para efetuar Login e ter acesso ao Dashboard, onde todas as respostas do formulário são listadas. 
+
 
 ###Estrutura de Pastas
 
