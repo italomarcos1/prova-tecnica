@@ -46,7 +46,6 @@ export default function FormPage() {
 
       await schema.validate(data, { abortEarly: false });
       const socialMedia = [facebook, instagram, linkedin];
-      console.tron.log(radio);
 
       if (
         radio === null ||
@@ -66,14 +65,8 @@ export default function FormPage() {
       };
 
       setSuccess(true);
-      console.tron.log('antes');
 
-      console.tron.log(userData);
-
-      const response = await api.post('create', userData);
-      console.tron.log('later');
-
-      console.tron.log(response.data);
+      await api.post('create', userData);
 
       localStorage.setItem('done', JSON.stringify(success));
       toast.success('Formulário preenchido com sucesso!');
@@ -94,7 +87,6 @@ export default function FormPage() {
       setLn(false);
       setRadio(false);
     }
-    console.tron.log(`radio: ${value}`);
   }
 
   return (
