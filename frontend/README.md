@@ -6,28 +6,11 @@
 
 Construí uma SPA (Single-Page Application) em React, consumindo a API do Back-end. Contém a página principal do formulário, uma página de redirecionamento (exibida após o usuário preencher o formulário), com a opção de atualizar os dados já preenchidos.
 
+Tomei a liberdade de criar uma página de Administrador, com email e senha de acesso para efetuar Login e ter acesso ao Dashboard, onde todas as respostas do formulário são listadas. 
+
 ###Estrutura de Pastas
 
 ```
-src
-|	
-	pages
-		Admin
-			Dashboard
-			Login
-		AfterForm
-		Form
-		UpdateForm
-	services
-		api.js
-		history.js
-	store
-		[configuração do Redux]
-	styles
-		global.js
-	App.js
-	index.js
-	routes.js
 src
 ├── components
 |	├── Header
@@ -41,24 +24,49 @@ src
 ├── pages
 |   ├── Admin
 |   |	├── Dashboard
-|   |	|	├──index.js
-|   | 	|	└──styles.js
+|   |	|	├── index.js
+|   | 	|	└── styles.js
 |   | 	|
 |   |	└── Login
-|   |		├──index.js
-|   | 		└──styles.js
+|   |		├── index.js
+|   | 		└── styles.js
 |   |
-   ├── AfterForm
-├── _layouts
-|   ├── default.html
-|   └── post.html
-├── _posts
-|   ├── 2007-10-29-why-every-programmer-should-play-nethack.textile
-|   └── 2009-04-26-barcamp-boston-4-roundup.textile
-├── _data
-|   └── members.yml
-├── _site
-└── index.html
+|   ├── AfterForm
+|   |	├── index.js
+|   | 	└── styles.js
+|   |
+|   ├── Form
+|   |	├── index.js
+|   | 	└── styles.js
+|   |
+|   ├── UpdateForm
+|   	├── index.js
+|    	└── styles.js
+|
+├── services
+|   ├── api.js
+|   └── history.js
+|
+├── store
+|   ├── modules
+|   |   ├── auth
+|   |   |  ├── actions.js
+|   |   |  ├── reducer.js
+|   |   |  └── sagas.js
+|   |   ├── rootReducer.js
+|   |   └── rootSaga.js
+|   ├── createStore.js
+|   ├── index.js
+|   ├── persistReducers.js
+|
+├── styles
+|	└── global.js
+|      
+├── App.js
+├── index.js
+├── routes.js
+├── .eslintrc.js
+└── .prettierrc.js
 
 		
 ```
