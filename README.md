@@ -14,9 +14,6 @@ Porém, essa aplicaão é **estática**. Então tomei a liberdade de construir u
 ---
 Acesse a aplicação (com uma API rodando)
 ---
-
-Porém, o site acima é **estático**, então tomei a liberdade de construir uma API em **Node.js** para armazenar os dados (respostas do formulário), incluindo uma página **Dashboard** com acesso de Administrador para listar esses dados, siga as instruções abaixo para usar a aplicação.
-
 O projeto está dividido em duas partes, o **backend** e o **frontend**, nas suas respectivas pastas.
 
 ---
