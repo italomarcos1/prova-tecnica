@@ -4,7 +4,7 @@
 Especificação do Back-end
 ---
 
-Construí um servidor com o framework [Express]() utilizando a **Arquitetura MVC** para receber os dados do formulário, efetuar validações e armazenar em um banco de dados, que roda em um container do **Docker**.
+Construí um API REST Node.js com o framework [Express](https://github.com/expressjs/express), implementando a **Arquitetura MVC** para receber os dados do formulário, efetuar validações e armazenar em um banco de dados, que roda em um container do **Docker**.
 
 ---
 Estrutura de Pastas
