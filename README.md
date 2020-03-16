@@ -29,7 +29,7 @@ Demonstração do formulário sendo preenchido
 
 ![demo](./take1.gif)
 
-Para ver em uma resolução melhor, clique [aqui](https://youtu.be/G8qENH0U4hs). (vídeo de 29seg)
+Para ver em uma resolução melhor, clique [aqui](https://youtu.be/3Eno1KbqFtc), onde mostro todas as funcionalidades da aplicação. (vídeo de 1min29seg)
 
 ---
 Executando o servidor
