@@ -61,7 +61,7 @@ Executando a aplicação
 
 - Da raiz do projeto, acesse a pasta da aplicação com:
 ```
-cd prova-tecnica/frontend
+cd frontend
 ```
 - Rode o comando abaixo para instalar as dependências:
 ```
