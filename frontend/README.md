@@ -8,6 +8,26 @@ Construí uma **SPA** (Single-Page Application) em **React**, consumindo a API d
 
 Tomei a liberdade de criar uma página de **Administrador**, com email e senha de acesso para efetuar **Login** e ter acesso ao **Dashboard**, onde todas as respostas do formulário são listadas. 
 
+Rotas da aplicação:
+```
+'localhost:3000/': rota inicial, para acessar o formulário.
+'localhost:3000/after': rota de redirecionamento, acessada após preencher o formulário.
+'localhost:3000/login': página de login do administrador.
+'localhost:3000/dashboard': página principal do administrador,  acessada após o login. Essa página lista todas as respostas ao formulário.
+```
+
+---
+Demonstração do Administrador acessando a Dashboard
+---
+
+![demo](../take2.gif)
+
+Para logar na aplicação acesse a rota '**/login**' e informe os seguintes dados:
+```
+email: admin@elogroup.com
+senha: pselogroup2020
+```
+
 ---
 Estrutura de Pastas
 ---
