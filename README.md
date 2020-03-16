@@ -45,7 +45,7 @@ yarn && yarn touch
 yarn dev
 ```
 
-Após isso o servidor estará executando. Abra um outro terminal para executar o front-end.
+Após isso o servidor estará executando. Deixe este terminal rodando em segundo-plano e abra um outro terminal para executar o front-end.
 
 ---
 Executando a aplicação
