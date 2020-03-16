@@ -13,13 +13,16 @@ Pré-requisitos
 - [Node.js](https://nodejs.org/en/download/) instalado.
 - [Docker](https://docs.docker.com/install/) e [Docker-cli](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-engine---community-1). O Docker-cli permite usar comandos do terminal para executar o Docker.
 
+**Opcional**:
+- [Yarn](https://yarnpkg.com/lang/pt-br/docs/install/) instalado. É um gerenciador de pacotes que substitui o NPM. É mantido pelo Facebook e é mais rápido.
+
 ---
 Demonstração do formulário sendo preenchido
 ---
 
 ![demo](./take1.gif)
 
-Para ver em uma resolução melhor, clique [aqui](https://youtu.be/G8qENH0U4hs).
+Para ver em uma resolução melhor, clique [aqui](https://youtu.be/G8qENH0U4hs). (vídeo de 29seg)
 
 ---
 Executando o servidor
@@ -45,32 +48,32 @@ cd prova-tecnica/backend
 ```
 - Rode o comando abaixo para instalar as dependências e popular o banco (**seeds**) com os dados do Administrador e alguns dados de usuários:
 ```
-yarn && yarn touch
+npm install && npm run touch
 ```
 - Por fim, execute a aplicação com o script abaixo:
 
 ```
-yarn dev
+npm run dev
 ```
 
-Após isso o servidor estará executando. Deixe este terminal rodando em segundo-plano e abra um outro terminal para executar o front-end.
+Após isso o servidor estará executando. Deixe este terminal rodando em segundo-plano e deve abrir um outro terminal para executar o front-end.
 
 ---
 Executando a aplicação
 ---
 
-- Da raiz do projeto, acesse a pasta da aplicação com:
+- Abra um novo terminal na raiz do projeto, acesse a pasta da aplicação com:
 ```
 cd frontend
 ```
 - Rode o comando abaixo para instalar as dependências:
 ```
-yarn 
+npm install
 ```
 - Por fim, execute a aplicação com o script abaixo:
 
 ```
-yarn start
+npm run start
 ```
 
 ---
