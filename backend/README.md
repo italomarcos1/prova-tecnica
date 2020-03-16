@@ -80,7 +80,7 @@ src
 - [Sequelize](https://github.com/sequelize/sequelize) - ORM para manipular o banco usando **migrations**. Uma das maiores vantagens é evitar o uso de SQL e manipular o banco com Javascript. Também fornece mais flexibilidade e tratar os dados (usando *hooks*) antes de repassar ao banco.
 - [Yup](https://github.com/jquense/yup) - valida os dados recebidos pelo front-end, como um campo não preenchido, aplica confirmação de senha, entre outras funcionalidades.
 - [JWT](https://www.npmjs.com/package/jsonwebtoken) - autentica o administrador e bloqueia o acesso de outros usuários em rotas específicas usando um*middleware do **Express**.
-- [Bcryptjs](https://www.npmjs.com/package/bcrypt) - criptografia de 
+- [Bcryptjs](https://www.npmjs.com/package/bcrypt) - criptografia de senhas. Utilizado para criptografar a senha do usuário Administrador. A senha não é salva no banco de dados, apenas o **hash** da senha, fornecendo mais segurança na aplicação.
 - [Yup](https://github.com/jquense/yup) - usado para validar os dados enviados no formulário.
 
 ---
