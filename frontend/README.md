@@ -16,14 +16,6 @@ Rotas da aplicação:
 'localhost:3000/dashboard': página principal do administrador,  acessada após o login. Essa página lista todas as respostas ao formulário.
 ```
 
----
-Demonstração do Administrador acessando a Dashboard
----
-
-![demo](../take2.gif)
-
-Para ver em uma resolução melhor, clique [aqui](https://youtu.be/uuU6S572XrY). (vídeo de 27seg)
-
 Para logar na aplicação acesse a rota '**/login**' e informe os seguintes dados:
 ```
 email: admin@elogroup.com
