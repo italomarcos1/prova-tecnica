@@ -3,7 +3,7 @@ module.exports = {
   host: 'localhost',
   username: 'elogroup-t',
   password: 'challenge',
-  database: 'elogroup-form',
+  database: 'elogroup-t',
 
   define: {
     timestamps: true, // garante que será criado um atributo: created_at e updated_at na tabela do banco de dados.
