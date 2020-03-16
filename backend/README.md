@@ -84,11 +84,12 @@ src
 - [Yup](https://github.com/jquense/yup) - usado para validar os dados enviados no formulário.
 
 ---
-###Plataforma Gupy
-
+Plataforma Gupy
+---
 Italo Marcos
 
 ---
-###LinkedIn
+LinkedIn
+---
 
 [Italo Marcos](https://www.linkedin.com/in/italomarcos1)

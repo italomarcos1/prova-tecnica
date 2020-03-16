@@ -71,3 +71,13 @@ yarn
 ```
 yarn start
 ```
+
+---
+Plataforma Gupy
+---
+Italo Marcos
+
+---
+LinkedIn
+---
+[Italo Marcos](https://www.linkedin.com/in/italomarcos1)

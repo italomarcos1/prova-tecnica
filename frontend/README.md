@@ -168,10 +168,12 @@ Outras libs utilizadas no desenvolvimento da aplicação, além das libs já lis
 
 ---
 Plataforma Gupy
+---
 
 Italo Marcos
 
 ---
 LinkedIn
+---
 
 [Italo Marcos](https://www.linkedin.com/in/italomarcos1)
