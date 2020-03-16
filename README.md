@@ -19,6 +19,7 @@ Demonstração do formulário sendo preenchido
 
 ![demo](./take1.gif)
 
+Para ver em uma resolução melhor, clique [aqui](https://youtu.be/G8qENH0U4hs).
 
 ---
 Executando o servidor
