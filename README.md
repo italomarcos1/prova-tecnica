@@ -14,7 +14,7 @@ Pré-requisitos
 - [Docker](https://docs.docker.com/install/) e [Docker-cli](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-engine---community-1). O Docker-cli permite usar comandos do terminal para executar o Docker.
 
 ---
-Como executar a aplicação
+Executando o servidor
 ---
 
 Abra um terminal e execute os seguintes comandos da maneira como foram definidos, não altere nada.
@@ -43,4 +43,24 @@ yarn && yarn touch
 
 ```
 yarn dev
+```
+
+Após isso o servidor estará executando. Abra um outro terminal para executar o front-end.
+
+---
+Executando a aplicação
+---
+
+- Da raiz do projeto, acesse a pasta da aplicação com:
+```
+cd prova-tecnica/frontend
+```
+- Rode o comando abaixo para instalar as dependências:
+```
+yarn 
+```
+- Por fim, execute a aplicação com o script abaixo:
+
+```
+yarn start
 ```
