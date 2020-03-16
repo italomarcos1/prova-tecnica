@@ -4,6 +4,19 @@
 Prova Técnica para Desenvolvedor - EloGroup
 ---
 
+---
+Acesse a aplicação (forma estática)
+---
+Para acessar a aplicação, clique [aqui](https://pselogroup2020-italomarcos.netlify.com/). A aplicação segue os requisitos da documentação. O telefone aceita apenas números, caso o usuário **não** tenha redes sociais não é permitido marcar as opções, e nenhum campo pode ser deixado **em branco**.  **Toasts** foram implementados para alertar o usuário, além de ser permitido preencher a aplicação apenas **uma** vez, havendo um redirecionamento automático caso o mesmo tente acessar o formulário novamente.
+
+Porém, essa aplicaão é **estática**. Então tomei a liberdade de construir uma API em **Node.js** para armazenar os dados (respostas do formulário), incluindo uma página **Dashboard** com acesso de Administrador para listar esses dados, siga as instruções abaixo para usar a aplicação.
+
+---
+Acesse a aplicação (com uma API rodando)
+---
+
+Porém, o site acima é **estático**, então tomei a liberdade de construir uma API em **Node.js** para armazenar os dados (respostas do formulário), incluindo uma página **Dashboard** com acesso de Administrador para listar esses dados, siga as instruções abaixo para usar a aplicação.
+
 O projeto está dividido em duas partes, o **backend** e o **frontend**, nas suas respectivas pastas.
 
 ---
@@ -12,9 +25,6 @@ Pré-requisitos
 
 - [Node.js](https://nodejs.org/en/download/) instalado.
 - [Docker](https://docs.docker.com/install/) e [Docker-cli](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-engine---community-1). O Docker-cli permite usar comandos do terminal para executar o Docker.
-
-**Opcional**:
-- [Yarn](https://yarnpkg.com/lang/pt-br/docs/install/) instalado. É um gerenciador de pacotes que substitui o NPM. É mantido pelo Facebook e é mais rápido.
 
 ---
 Demonstração do formulário sendo preenchido
