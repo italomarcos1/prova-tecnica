@@ -31,6 +31,5 @@
     "touch": "npx sequelize db:migrate && npx sequelize db:seed:all",
     "build": "sucrase ./src -d ./dist --transforms imports",
     "start": "node dist/server.js"
- }
+  }
 }
-
