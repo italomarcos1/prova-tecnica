@@ -43,7 +43,7 @@ git clone https://github.com/italomarcos1/prova-tecnica.git
 ```
 - Crie um container do Docker com uma imagem do Postgres para armazenar os dados respondidos no formulário: 
 ```
-sudo docker run --name=provatecnica -e POSTGRES_PASSWORD=challenge -e POSTGRES_USER=elogroup-t -d -p 5432:5432 postgres:11
+sudo docker run --name=provatecnica -e POSTGRES_PASSWORD=challenge -d -p 5432:5432 postgres:11
 ```
 - Inicie o container criado acima:
 ```
