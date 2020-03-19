@@ -14,7 +14,7 @@ Porém, essa aplicaão é **estática**. Então tomei a liberdade de construir u
 ---
 Acesse a aplicação (com uma API rodando)
 ---
-O projeto está dividido em duas partes, o **backend** e o **frontend**, nas suas respectivas pastas.
+O projeto está dividido em duas partes, o **backend** e o **frontend**, nas suas respectivas pastas. Em cada pasta há um **README** explicando a estrutura de pastas, funcionalidades e cada bilbioteca utilizada.
 
 ---
 Pré-requisitos
@@ -29,10 +29,10 @@ Demonstração do formulário sendo preenchido
 
 ![demo](./take1.gif)
 
-Para ver em uma resolução melhor, clique [aqui](https://youtu.be/G8qENH0U4hs). (vídeo de 29seg)
+Para ver em uma resolução melhor, clique [aqui](https://youtu.be/3Eno1KbqFtc), onde mostro todas as funcionalidades da aplicação. (vídeo de 1min29seg)
 
 ---
-Executando o servidor
+Executando o servidor (backend)
 ---
 
 Abra um terminal e execute os seguintes comandos da maneira como foram definidos, não altere nada.
@@ -66,7 +66,7 @@ npm run dev
 Após isso o servidor estará executando. Deixe este terminal rodando em segundo-plano e deve abrir um outro terminal para executar o front-end.
 
 ---
-Executando a aplicação
+Executando a aplicação (frontend)
 ---
 
 - Abra um novo terminal na raiz do projeto, acesse a pasta da aplicação com:
