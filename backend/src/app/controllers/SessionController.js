@@ -25,14 +25,12 @@ class SessionController {
         .status(400)
         .json({ message: 'Esse administrador não está cadastrado.' });
     }
-    console.log('checa senha');
+
     if (!(await admin.checkPassword(password))) {
       return res
         .status(401)
         .json({ message: 'A senha informada está incorreta' });
     }
-
-    console.log('passou?');
 
     const { id, name } = admin;
 
