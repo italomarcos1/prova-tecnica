@@ -9,10 +9,11 @@ export const Container = styled.View`
 `;
 
 export const Content = styled.View`
-  align-self: stretch;
   background-color: #444;
   justify-content: center;
   align-items: center;
+  flex: 1;
+  display: flex;
   width: 300px;
   height: 350px;
   border: 4px solid #292929;
@@ -22,6 +23,14 @@ export const Content = styled.View`
 `;
 
 export const ContentText = styled.Text`
-  font-size: 32px;
+  font-size: 26px;
+  text-align: center;
   color: #ccc;
+  padding: 20px;
+`;
+
+export const Logo = styled.Image`
+  width: 187px;
+  height: 42px;
+  margin-bottom: 30px;
 `;

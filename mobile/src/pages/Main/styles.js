@@ -59,3 +59,18 @@ export const SubmitButton = styled(CustomButton)`
   justify-content: center;
   padding: 0px 10px;
 `;
+
+export const RadioButton = styled(CustomButton)`
+  align-items: center;
+  background: #e6b32a;
+  border: 2px solid #252525;
+  border-radius: 8px;
+  color: #252525;
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  height: 40px;
+  width: 200px;
+  justify-content: center;
+  padding: 0px 10px;
+`;
