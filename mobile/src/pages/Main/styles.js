@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { Image } from 'react-native';
+// import { RectButton } from 'react-native-gesture-handler';
 import Input from '../../components/Input';
 import CustomButton from '../../components/CustomButton';
 
@@ -8,30 +8,27 @@ export const Container = styled.View`
   justify-content: center;
   align-items: center;
   padding: 0 30px;
-  background-color: #333;
+  background-color: #191919;
 `;
 
 export const Form = styled.View`
   align-self: stretch;
   margin-top: 50px;
-  background-color: #e6b32a;
+  background-color: #444;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 25px;
 `;
 
 export const FormInput = styled(Input)`
-  margin-bottom: 10px;
-`;
-
-export const SignLink = styled.TouchableOpacity`
-  margin-top: 20px;
-`;
-
-export const SignLinkText = styled.Text`
-  color: #fff;
-  font-weight: bold;
-  align-self: center;
+  height: 43px;
+  width: 225px;
+  border: 1.5px solid #333;
+  border-radius: 4px;
+  padding: 2px 10px;
+  background-color: #777;
+  margin-bottom: 15px;
+  /* mudar a cor no onFocus e desabilita com onBlur, nas props */
 `;
 
 export const Social = styled.View`
@@ -42,12 +39,17 @@ export const Social = styled.View`
   padding: 5px;
 `;
 
-export const SocialMediaButton = styled(CustomButton)`
-  color: ${({ on }) => (on ? '#339123' : '#ccc')};
-  padding: 5px;
-`;
-
-export const Logo = styled(Image)`
-  width: 125px;
-  height: 28px;
+export const SubmitButton = styled(CustomButton)`
+  align-items: center;
+  background: #e6b32a;
+  border: 2px solid #252525;
+  border-radius: 8px;
+  color: #252525;
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  height: 45px;
+  width: 200px;
+  justify-content: center;
+  padding: 0px 15px;
 `;

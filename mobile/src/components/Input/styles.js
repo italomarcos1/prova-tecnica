@@ -13,7 +13,7 @@ export const MadeInput = styled.TextInput.attrs({
   placeholderTextColor: 'rgba(255,255,255,0.8)',
 })`
   flex: 1;
-  font-size: 15px;
+  font-size: 13px;
   margin-left: 10px;
   color: #fff;
 `;

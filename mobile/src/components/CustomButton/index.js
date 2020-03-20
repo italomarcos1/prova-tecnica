@@ -5,10 +5,10 @@ import { MadeButton, TextButton } from './styles';
 
 Icon.loadFont();
 
-export default function CustomButton({ children, icon, ...rest }) {
+export default function CustomButton({ children, icon, color, ...rest }) {
   return (
     <MadeButton {...rest}>
-      {icon && <Icon name={icon} size={20} color="#333" />}
+      {icon && <Icon name={icon} size={20} color={color} />}
       <TextButton>{children}</TextButton>
     </MadeButton>
   );
@@ -25,8 +25,10 @@ CustomButton.defaultProps = {
 
 CustomButton.propTypes = {
   icon: PropTypes.string,
+  color: PropTypes.string,
 };
 
 CustomButton.defaultProps = {
   icon: null,
+  color: null,
 };

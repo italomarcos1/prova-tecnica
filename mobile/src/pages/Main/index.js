@@ -1,16 +1,22 @@
 import React, { useEffect, useRef, useState } from 'react';
+import AsyncStorage from '@react-native-community/async-storage';
 import { Modal, View, Text, Image, TouchableOpacity } from 'react-native';
-import {
-  Container,
-  Form,
-  FormInput,
-  Social,
-  SocialMediaButton,
-  Logo,
-} from './styles';
+import { Container, Form, FormInput, Social, SubmitButton } from './styles';
 import CustomButton from '../../components/CustomButton';
 
-export default function Main() {
+import api from '../../services/api';
+
+export default function Main({ navigation }) {
+  useEffect(() => {
+    async function alreadyDid() {
+      if (await AsyncStorage.getItem('done')) {
+        navigation.navigate('After');
+      }
+    }
+
+    alreadyDid();
+  }, []);
+
   const [name, setName] = useState('');
   const [lastName, setLastName] = useState('');
   const [phone, setPhone] = useState('');
@@ -27,7 +33,6 @@ export default function Main() {
 
   const phoneRef = useRef();
   const lastNameRef = useRef();
-  const knownRef = useRef();
 
   useEffect(() => {
     setVisible(false);
@@ -36,21 +41,40 @@ export default function Main() {
   function handleHasSocial(value) {
     if (value !== hasSocial) {
       setYes(!yes);
+      setFb(false);
+      setIg(false);
+      setLn(false);
       setNo(!no);
       setHasSocial(!hasSocial);
     }
   }
 
-  function handleSubmit() {
-    console.tron.log({
+  async function handleSubmit() {
+    if (name)
+      console.tron.log({
+        name,
+        lastName,
+        phone,
+        hasSocial,
+        facebook,
+        instagram,
+        linkedin,
+      });
+
+    const response = await api.post('/create', {
       name,
-      lastName,
-      phone,
-      hasSocial,
-      facebook,
-      instagram,
-      linkedin,
+      last_name: lastName,
+      phone_number: phone,
+      got_to_know: option,
+      has_social: hasSocial,
+      social_media: hasSocial ? [facebook, instagram, linkedin] : null,
     });
+
+    console.tron.log(response.data);
+
+    AsyncStorage.setItem('done', JSON.stringify({ done: true }));
+
+    navigation.navigate('After');
   }
 
   return (
@@ -95,11 +119,33 @@ export default function Main() {
           placeholder="Número de telefone"
           ref={phoneRef}
         />
-        <CustomButton onPress={() => setVisible(true)}>
-          <Text>Como nos conheceu?</Text>
+        <Text style={{ padding: 3, fontWeight: 'bold', fontSize: 16 }}>
+          Como nos conheceu?
+        </Text>
+        <CustomButton
+          style={{
+            backgroundColor: '#777',
+            padding: 10,
+            marginBottom: 10,
+            marginTop: 10,
+            height: 35,
+            width: 225,
+            borderWidth: 1.5,
+            borderStyle: 'solid',
+            borderColor: '#333',
+            borderRadius: 4,
+          }}
+          onPress={() => setVisible(true)}
+        >
+          {option || 'Clique para abrir as opções'}
         </CustomButton>
 
-        <Modal visible={visible} animationType="slide" transparent>
+        <Modal
+          visible={visible}
+          animationType="slide"
+          transparent
+          onRequestClose={() => setVisible(false)}
+        >
           <TouchableOpacity
             onPress={() => setVisible(false)}
             style={{
@@ -110,58 +156,85 @@ export default function Main() {
           >
             <View
               style={{
-                backgroundColor: '#ffffff',
+                backgroundColor: '#999',
                 margin: 50,
-                padding: 50,
+                padding: 15,
                 alignItems: 'center',
+                borderRadius: 4,
               }}
             >
-              <Text>Testando</Text>
-              <Text>Testando</Text>
-              <Text>Testando</Text>
+              <CustomButton
+                onPress={() => setOption('TV')}
+                style={{
+                  padding: 15,
+                }}
+              >
+                TV
+              </CustomButton>
+              <CustomButton
+                onPress={() => setOption('Internet')}
+                style={{
+                  padding: 15,
+                }}
+              >
+                Internet
+              </CustomButton>
+              <CustomButton
+                onPress={() => setOption('Outros')}
+                style={{
+                  padding: 15,
+                }}
+              >
+                Outros
+              </CustomButton>
             </View>
           </TouchableOpacity>
         </Modal>
 
-        <Text style={{ padding: 5 }}>Tem rede social?</Text>
+        <Text style={{ padding: 3, fontWeight: 'bold', fontSize: 16 }}>
+          Tem rede social?
+        </Text>
         <Social visible>
-          <SocialMediaButton
+          <CustomButton
             onPress={() => {
               handleHasSocial(true);
             }}
-            on={yes}
+            color={yes ? '#e6b32a' : '#ccc'}
           >
             Sim
-          </SocialMediaButton>
-          <SocialMediaButton
+          </CustomButton>
+          <CustomButton
             onPress={() => {
               handleHasSocial(false);
             }}
-            on={no}
+            color={no ? '#e6b32a' : '#ccc'}
           >
             Não
-          </SocialMediaButton>
+          </CustomButton>
         </Social>
 
         <Social visible={hasSocial}>
-          <SocialMediaButton
-            on={facebook}
+          <CustomButton
+            color={facebook ? '#e6b32a' : '#ccc'}
             icon="facebook"
             onPress={() => setFb(!facebook)}
+            style={{ marginRight: 10 }}
           />
-          <SocialMediaButton
-            on={instagram}
+          <CustomButton
+            color={instagram ? '#e6b32a' : '#ccc'}
             icon="instagram"
             onPress={() => setIg(!instagram)}
+            style={{ marginRight: 10 }}
           />
-          <SocialMediaButton
-            on={linkedin}
+          <CustomButton
+            color={linkedin ? '#e6b32a' : '#ccc'}
             icon="linkedin"
             onPress={() => setLn(!linkedin)}
+            style={{}}
           />
         </Social>
 
-        <CustomButton onPress={handleSubmit}>Enviar</CustomButton>
+        <SubmitButton onPress={handleSubmit}>Enviar</SubmitButton>
       </Form>
     </Container>
   );
