@@ -1,7 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
+import PropTypes from 'prop-types';
 import AsyncStorage from '@react-native-community/async-storage';
-import { Modal, View, Text, Image, TouchableOpacity } from 'react-native';
-import { Container, Form, FormInput, Social, SubmitButton } from './styles';
+import { Modal, View, Text, TouchableOpacity } from 'react-native';
+import {
+  Container,
+  HeaderText,
+  Form,
+  FormInput,
+  Social,
+  SubmitButton,
+} from './styles';
 import CustomButton from '../../components/CustomButton';
 
 import api from '../../services/api';
@@ -50,18 +58,7 @@ export default function Main({ navigation }) {
   }
 
   async function handleSubmit() {
-    if (name)
-      console.tron.log({
-        name,
-        lastName,
-        phone,
-        hasSocial,
-        facebook,
-        instagram,
-        linkedin,
-      });
-
-    const response = await api.post('/create', {
+    await api.post('/create', {
       name,
       last_name: lastName,
       phone_number: phone,
@@ -70,8 +67,6 @@ export default function Main({ navigation }) {
       social_media: hasSocial ? [facebook, instagram, linkedin] : null,
     });
 
-    console.tron.log(response.data);
-
     AsyncStorage.setItem('done', JSON.stringify({ done: true }));
 
     navigation.navigate('After');
@@ -79,13 +74,7 @@ export default function Main({ navigation }) {
 
   return (
     <Container>
-      <Image
-        source={{
-          uri: 'https://elogroup.eadplataforma.com/upload/others/logo.png',
-        }}
-        style={{ width: 125, height: 28 }}
-      />
-
+      <HeaderText>Form</HeaderText>
       <Form>
         <FormInput
           icon="perm-identity"
@@ -239,3 +228,9 @@ export default function Main({ navigation }) {
     </Container>
   );
 }
+
+Main.propTypes = {
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func,
+  }).isRequired,
+};

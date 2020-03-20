@@ -11,12 +11,18 @@ export const Container = styled.View`
   background-color: #191919;
 `;
 
+export const HeaderText = styled.Text`
+  font-size: 32px;
+  color: #ccc;
+`;
+
 export const Form = styled.View`
   align-self: stretch;
   margin-top: 50px;
   background-color: #444;
   justify-content: center;
   align-items: center;
+  border-radius: 4px;
   padding: 25px;
 `;
 
@@ -48,8 +54,8 @@ export const SubmitButton = styled(CustomButton)`
   display: flex;
   font-size: 20px;
   font-weight: bold;
-  height: 45px;
+  height: 40px;
   width: 200px;
   justify-content: center;
-  padding: 0px 15px;
+  padding: 0px 10px;
 `;
