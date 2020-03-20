@@ -47,7 +47,7 @@ export const Social = styled.View`
 
 export const SubmitButton = styled(CustomButton)`
   align-items: center;
-  background: #e6b32a;
+  background: #f0f;
   border: 2px solid #252525;
   border-radius: 8px;
   color: #252525;
