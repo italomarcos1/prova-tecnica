@@ -11,10 +11,12 @@ Para acessar a aplicação, clique [aqui](https://pselogroup2020-italomarcos.net
 
 Porém, essa aplicaão é **estática**. Então tomei a liberdade de construir uma API em **Node.js** para armazenar os dados (respostas do formulário), incluindo uma página **Dashboard** com acesso de Administrador para listar esses dados, siga as instruções abaixo para usar a aplicação.
 
+A aplicação **mobile** foi construída em React Native e os dados preenchidos no formulário são armazenados em um servidor na DigitalOcean. No **README** da pasta **mobile** tem mais detalhes.
+
 ---
 Acesse a aplicação (com uma API rodando)
 ---
-O projeto está dividido em duas partes, o **backend** e o **frontend**, nas suas respectivas pastas. Em cada pasta há um **README** explicando a estrutura de pastas, funcionalidades e cada bilbioteca utilizada.
+O projeto está dividido em duas partes, o **backend** e o **frontend**, e **mobile** nas suas respectivas pastas. Em cada pasta há um **README** explicando a estrutura de pastas, funcionalidades e cada bilbioteca utilizada.
 
 ---
 Pré-requisitos
