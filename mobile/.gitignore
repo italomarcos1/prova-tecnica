@@ -59,6 +59,9 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+<<<<<<< HEAD
 
 android/
 ios/
+=======
+>>>>>>> 0e8e128346cf7ac93c1c141e1b875fba408d68bd

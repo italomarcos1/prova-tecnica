@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import AsyncStorage from '@react-native-community/async-storage';
-import { Modal, View, Text, TouchableOpacity } from 'react-native';
+import { Modal, View, Text, TouchableOpacity, Alert } from 'react-native';
 import {
   Container,
   HeaderText,
@@ -49,15 +49,32 @@ export default function Main({ navigation }) {
   function handleHasSocial(value) {
     if (value !== hasSocial) {
       setYes(!yes);
+      setNo(!no);
       setFb(false);
       setIg(false);
       setLn(false);
-      setNo(!no);
       setHasSocial(!hasSocial);
     }
   }
 
   async function handleSubmit() {
+    if (name === '' || lastName === '' || phone === '' || option === '') {
+      Alert.alert('Erro no envio', 'Você deve preencher todos os campos');
+      return;
+    }
+
+    if (
+      hasSocial === true &&
+      facebook === false &&
+      instagram === false &&
+      linkedin === false
+    ) {
+      Alert.alert(
+        'Erro no envio',
+        'Você deve preencher pelo menos uma das redes sociais.'
+      );
+      return;
+    }
     await api.post('/create', {
       name,
       last_name: lastName,
@@ -74,7 +91,7 @@ export default function Main({ navigation }) {
 
   return (
     <Container>
-      <HeaderText>Form</HeaderText>
+      <HeaderText>Formulário</HeaderText>
       <Form>
         <FormInput
           icon="perm-identity"
