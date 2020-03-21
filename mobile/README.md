@@ -6,6 +6,8 @@ Especificação do aplicativo Mobile
 
 Construí um aplicativo em **React Native** com o formulário para os usuários. Vale ressaltar que essa aplicação consome a mesma a API do Frontend. Contém a página principal do formulário, uma página de redirecionamento (exibida após o usuário preencher o formulário).
 
+Aqui está um link mostrando a aplicação rodando. Assista ao [vídeo](https://www.youtube.com/watch?v=isAx11mOVbo). (duração de 1min40seg).
+
 ---
 Estrutura de Pastas
 ---
