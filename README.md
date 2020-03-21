@@ -9,7 +9,7 @@ Acesse a aplicação (forma estática)
 ---
 Para acessar a aplicação, clique [aqui](https://pselogroup2020-italomarcos.netlify.com/). A aplicação segue os requisitos da documentação. O telefone aceita apenas números, caso o usuário **não** tenha redes sociais não é permitido marcar as opções, e nenhum campo pode ser deixado **em branco**.  **Toasts** foram implementados para alertar o usuário, além de ser permitido preencher a aplicação apenas **uma** vez, havendo um redirecionamento automático caso o mesmo tente acessar o formulário novamente.
 
-Porém, essa aplicaão é **estática**. Então tomei a liberdade de construir uma API em **Node.js** para armazenar os dados (respostas do formulário), incluindo uma página **Dashboard** com acesso de Administrador para listar esses dados, siga as instruções abaixo para usar a aplicação.
+Porém, essa aplicação é **estática**. Então tomei a liberdade de construir uma API em **Node.js** para armazenar os dados (respostas do formulário), incluindo uma página **Dashboard** com acesso de Administrador para listar esses dados, siga as instruções abaixo para usar a aplicação.
 
 A aplicação **mobile** foi construída em React Native e os dados preenchidos no formulário são armazenados em um servidor na DigitalOcean. No **README** da pasta **mobile** tem mais detalhes.
 
