@@ -28,6 +28,8 @@
   },
   "scripts": {
     "dev": "nodemon src/server.js",
-    "touch": "yarn sequelize db:migrate && yarn sequelize db:seed:all"
+    "touch": "npx sequelize db:migrate && npx sequelize db:seed:all",
+    "build": "sucrase ./src -d ./dist --transforms imports",
+    "start": "node dist/server.js"
   }
 }

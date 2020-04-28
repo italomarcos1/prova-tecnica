@@ -4,9 +4,23 @@
 Especificação do Front-end
 ---
 
-Construí uma **SPA** (Single-Page Application) em **React**, consumindo a API do Back-end. Contém a página principal do formulário, uma página de redirecionamento (exibida após o usuário preencher o formulário), com a opção de atualizar os dados já preenchidos.
+Construí uma **SPA** (Single-Page Application) em **React**, consumindo a API do Back-end. Contém a página principal do formulário, uma página de redirecionamento (exibida após o usuário preencher o formulário).
 
-Tomei a liberdade de criar uma página de **Administrador**, com email e senha de acesso para efetuar **Login** e ter acesso ao **Dashboard**, onde todas as respostas do formulário são listadas. 
+Além do formulário, há uma página de **Administrador**, com email e senha de acesso para efetuar **Login** e ter acesso ao **Dashboard**, onde todas as respostas do formulário são listadas. Há um vídeo-demonstração logo abaixo:
+
+Rotas da aplicação:
+```
+'localhost:3000/': rota inicial, para acessar o formulário.
+'localhost:3000/after': rota de redirecionamento, acessada após preencher o formulário.
+'localhost:3000/login': página de login do administrador.
+'localhost:3000/dashboard': página principal do administrador,  acessada após o login. Essa página lista todas as respostas ao formulário.
+```
+
+Para logar na aplicação acesse a rota '**/login**' e informe os seguintes dados:
+```
+email: admin@elogroup.com
+senha: pselogroup2020
+```
 
 ---
 Estrutura de Pastas
@@ -47,13 +61,9 @@ src
 |   |	├── index.js
 |   | 	└── styles.js
 |   |
-|   ├── Form
+|   └── Form
 |   |	├── index.js
 |   | 	└── styles.js
-|   |
-|  └── UpdateForm
-|   	├── index.js
-|    	└── styles.js
 |
 ├── services
 |    ├── api.js
@@ -102,9 +112,7 @@ src
 
 `pages/Form` - página principal do formulário, que o cliente terá acesso. Utiliza o componente [Form](https://unform.dev/guides/basic-form) da lib [Unform](https://github.com/rocketseat/unform) e os inputs listados acima. Conta com validações também utilizando a lib [Yup](https://github.com/jquense/yup). Usa toasts da lib [React Toastify](https://github.com/fkhadra/react-toastify) para avisar quando o usuário não preenche algum campo corretamente. O usuário é bloqueado de acessar essa página após preencher o formulário, e é redirecionado para a página `AfterForm`.
 
-`pages/AfterForm` - página de redirecionamento acessada após o usuário preencher o formulário. O usuário é impedido de acessar esta página se não preencheu o formulário, e após preencher, não pode preencher novamente o formulário. É possível apenas modificar seus dados, mas não preencher uma nova resposta.
-
-`pages/UpdateForm` - reutiliza o formulário da página `Form` para permitir atualizar os dados do usuário. Apenas modifica os dados preenchidos, não é adicionada uma nova resposta ao banco.
+`pages/AfterForm` - página de redirecionamento acessada após o usuário preencher o formulário. O usuário é impedido de acessar esta página se não preencheu o formulário, e após preencher, não pode preencher novamente o formulário.
 
 `services/api` - arquivo de conexão à API utilizando a lib [Axios](https://github.com/axios/axios).
 
@@ -147,11 +155,13 @@ Outras libs utilizadas no desenvolvimento da aplicação, além das libs já lis
 - [Yup](https://github.com/jquense/yup) - usado para validar os dados enviados no formulário.
 
 ---
-###Plataforma Gupy
+Plataforma Gupy
+---
 
 Italo Marcos
 
 ---
-###LinkedIn
+LinkedIn
+---
 
 [Italo Marcos](https://www.linkedin.com/in/italomarcos1)

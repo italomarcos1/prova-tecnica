@@ -1,35 +1,96 @@
 ![EloGroup](EloGroup.png)
 
 ---
-# Instruções para o Desafio de Programação
-
-
-Você deve desenvolver um formulário HTML e uma rotina em Javascript (pode ser feito em Javascript puro ou utilizando qualquer framework open source, desde que esteja explicitado qual no readme do seu repositório) que envie via POST os dados deste formulário em formato JSON para o endpoint "http://localhost:8080". Você tem até 16/03/2020 às 23:59 para submeter o desafio, boa sorte!
-
-
-O que você deve construir:
-
----
-1. O Formulário deverá conter os seguintes campos:
-	* Nome: Tipo Texto
-	* Telefone: Tipo Texto
-	* Como nos conheceu: Tipo Combo box (select) com as seguintes opções: Tv, Internet e outros.
-	* Possui rede social: Tipo rádio com as opções Sim e Não. Ao clicar em Sim, habilitar o campo abaixo.
-	* Quais: Tipo checkbox com as seguintes opções Facebook, LinkedIn e Instagram.
+Prova Técnica para Desenvolvedor - EloGroup
 ---
 
-2. Validações
-	* Nome deve ser obrigatório e conter ao menos um sobrenome.
-	* Telefone deve possuir somente números no seguinte formato: 99 – 99999999.
-	* Os valores informados nos checkbox somente podem ser enviados se o campo Possui rede social estiver marcado como Sim.
-	* As opções selecionadas nos campos do tipo checkbox devem ser enviadas em um Array.
 ---
-
-3. Considerações
-	* As mensagens de validação podem ser emitidas por qualquer meio (alert, toast, dentre outros).
-	* Após o envio (considerar que se as validações de campos estiverem ok o envio ocorrerá com sucesso) o botão de enviar deve ser desabilitado.
+Acesse a aplicação (forma estática)
 ---
+Para acessar a aplicação, clique [aqui](https://pselogroup2020-italomarcos.netlify.com/). A aplicação segue os requisitos da documentação. O telefone aceita apenas números, caso o usuário **não** tenha redes sociais não é permitido marcar as opções, e nenhum campo pode ser deixado **em branco**.  **Toasts** foram implementados para alertar o usuário, além de ser permitido preencher a aplicação apenas **uma** vez, havendo um redirecionamento automático caso o mesmo tente acessar o formulário novamente.
 
-4. Os códigos desenvolvidos deverão ser "commitados" em um repositório do git hub, contendo um arquivo README.md explicando a hierarquia dos arquivos e informando o nome utilizado na plataforma Gupy, compartilhado em modo somente leitura, apenas após a finalização do desafio, com o seguinte usuário: elogroup-t 
+Porém, essa aplicação é **estática**. Então tomei a liberdade de construir uma API em **Node.js** para armazenar os dados (respostas do formulário), incluindo uma página **Dashboard** com acesso de Administrador para listar esses dados, siga as instruções abaixo para usar a aplicação.
+
+A aplicação **mobile** foi construída em React Native e os dados preenchidos no formulário são armazenados em um servidor na DigitalOcean. No **README** da pasta **mobile** tem mais detalhes.
 
 ---
+Acesse a aplicação (com uma API rodando)
+---
+O projeto está dividido em duas partes, o **backend** e o **frontend**, e **mobile** nas suas respectivas pastas. Em cada pasta há um **README** explicando a estrutura de pastas, funcionalidades e cada bilbioteca utilizada.
+
+---
+Pré-requisitos
+---
+
+- [Node.js](https://nodejs.org/en/download/) instalado.
+- [Docker](https://docs.docker.com/install/) e [Docker-cli](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-engine---community-1). O Docker-cli permite usar comandos do terminal para executar o Docker.
+
+---
+Demonstração do formulário sendo preenchido
+---
+
+![demo](./take1.gif)
+
+Para ver em uma resolução melhor, clique [aqui](https://youtu.be/3Eno1KbqFtc), onde mostro todas as funcionalidades da aplicação. (vídeo de 1min29seg)
+
+---
+Executando o servidor (backend)
+---
+
+Abra um terminal e execute os seguintes comandos da maneira como foram definidos, não altere nada.
+
+- Clone o repositório:
+```
+git clone https://github.com/italomarcos1/prova-tecnica.git
+```
+- Crie um container do Docker com uma imagem do Postgres para armazenar os dados respondidos no formulário: 
+```
+sudo docker run --name=provatecnica -e POSTGRES_PASSWORD=challenge -d -p 5432:5432 postgres:11
+```
+- Inicie o container criado acima:
+```
+docker start provatecnica
+```
+- Entre na pasta que contém os arquivos do servidor:
+```
+cd prova-tecnica/backend
+```
+- Rode o comando abaixo para instalar as dependências e popular o banco (**seeds**) com os dados do Administrador e alguns dados de usuários:
+```
+npm install && npm run touch
+```
+- Por fim, execute a aplicação com o script abaixo:
+
+```
+npm run dev
+```
+
+Após isso o servidor estará executando. Deixe este terminal rodando em segundo-plano e deve abrir um outro terminal para executar o front-end.
+
+---
+Executando a aplicação (frontend)
+---
+
+- Abra um novo terminal na raiz do projeto, acesse a pasta da aplicação com:
+```
+cd frontend
+```
+- Rode o comando abaixo para instalar as dependências:
+```
+npm install
+```
+- Por fim, execute a aplicação com o script abaixo:
+
+```
+npm run start
+```
+
+---
+Plataforma Gupy
+---
+Italo Marcos
+
+---
+LinkedIn
+---
+[Italo Marcos](https://www.linkedin.com/in/italomarcos1)

@@ -1,9 +1,9 @@
-module.exports = {
+"use strict";module.exports = {
   dialect: 'postgres',
   host: 'localhost',
   username: 'postgres',
   password: 'challenge',
-  database: 'postgres',
+  database: 'elogroup',
 
   define: {
     timestamps: true, // garante que será criado um atributo: created_at e updated_at na tabela do banco de dados.
